@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1BD89424-F337-4369-964D-88F55A154991}</ProjectGuid>
+    <ProjectGuid>{D1E8CA79-9FFD-49F3-A2BE-7AF0B1DAC8A2}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>BondShopper.CStest</RootNamespace>
-    <AssemblyName>BondShopper.CStest</AssemblyName>
+    <RootNamespace>BondShopper.ClientApp</RootNamespace>
+    <AssemblyName>BondShopper.ClientApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,14 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.ServiceModel" />
@@ -51,57 +45,53 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\BondShopperServices\Reference.cs">
+    <Compile Include="Connected Services\BondShopperService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\BondShopperServices\BondService.wsdl" />
-    <None Include="Connected Services\BondShopperServices\item.xsd">
+    <None Include="Connected Services\BondShopperService\BondService.wsdl" />
+    <None Include="Connected Services\BondShopperService\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BondShopperServices\item1.xsd">
+    <None Include="Connected Services\BondShopperService\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BondShopperServices\item2.xsd">
+    <None Include="Connected Services\BondShopperService\item2.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="packages.config" />
     <None Include="Properties\DataSources\BondShopper.Model.Bond.datasource" />
     <None Include="Properties\DataSources\BondShopper.Model.Client.datasource" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\BondShopper.Model\BondShopper.Model.csproj">
-      <Project>{41F02CD6-16FD-4FA3-A3E0-2EC1BAD70234}</Project>
+      <Project>{41f02cd6-16fd-4fa3-a3e0-2ec1bad70234}</Project>
       <Name>BondShopper.Model</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BondShopper.Services\BondShopper.Services.csproj">
-      <Project>{B5400A7A-2273-4826-96AF-913D32606B87}</Project>
-      <Name>BondShopper.Services</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\BondShopperServices\" />
+    <WCFMetadataStorage Include="Connected Services\BondShopperService\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperServices\item.disco" />
+    <None Include="Connected Services\BondShopperService\item.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperServices\configuration91.svcinfo" />
+    <None Include="Connected Services\BondShopperService\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperServices\configuration.svcinfo" />
+    <None Include="Connected Services\BondShopperService\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperServices\Reference.svcmap">
+    <None Include="Connected Services\BondShopperService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

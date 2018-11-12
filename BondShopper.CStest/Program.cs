@@ -19,7 +19,6 @@ namespace BondShopper.CStest
                 Console.WriteLine("Hit the Any key to exit");
                 Console.ReadKey();
                 host.Close();
-
             }
             catch (Exception c)
             {
