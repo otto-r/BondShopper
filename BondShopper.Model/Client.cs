@@ -7,6 +7,10 @@ namespace BondShopper.Model
     [DataContract]
     public class Client
     {
+        public Client()
+        {
+            Holdings = new List<Bond>() { };
+        }
         [DataMember]
         public int Id { get; set; }
         //[Required]

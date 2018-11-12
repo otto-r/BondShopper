@@ -10,8 +10,10 @@ namespace BondShopper.Services
         [OperationContract]
         List<Bond> GetBonds();
         [OperationContract]
-        List<Client> GetClients();
+        void AddBond(Bond bond);
         [OperationContract]
-        void SubmitOrder(Order order);
+        void DeleteBond(Bond bond);
+        [OperationContract]
+        void UpdateBond(Bond bond);
     }
 }

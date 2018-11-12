@@ -21,17 +21,23 @@ namespace BondShopper.ClientApp.BondShopperService {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/GetBonds", ReplyAction="http://tempuri.org/IBondService/GetBondsResponse")]
         System.Threading.Tasks.Task<System.Collections.Generic.List<BondShopper.Model.Bond>> GetBondsAsync();
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/GetClients", ReplyAction="http://tempuri.org/IBondService/GetClientsResponse")]
-        System.Collections.Generic.List<BondShopper.Model.Client> GetClients();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/AddBond", ReplyAction="http://tempuri.org/IBondService/AddBondResponse")]
+        void AddBond(BondShopper.Model.Bond bond);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/GetClients", ReplyAction="http://tempuri.org/IBondService/GetClientsResponse")]
-        System.Threading.Tasks.Task<System.Collections.Generic.List<BondShopper.Model.Client>> GetClientsAsync();
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/AddBond", ReplyAction="http://tempuri.org/IBondService/AddBondResponse")]
+        System.Threading.Tasks.Task AddBondAsync(BondShopper.Model.Bond bond);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/SubmitOrder", ReplyAction="http://tempuri.org/IBondService/SubmitOrderResponse")]
-        void SubmitOrder(BondShopper.Model.Order order);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/DeleteBond", ReplyAction="http://tempuri.org/IBondService/DeleteBondResponse")]
+        void DeleteBond(BondShopper.Model.Bond bond);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/SubmitOrder", ReplyAction="http://tempuri.org/IBondService/SubmitOrderResponse")]
-        System.Threading.Tasks.Task SubmitOrderAsync(BondShopper.Model.Order order);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/DeleteBond", ReplyAction="http://tempuri.org/IBondService/DeleteBondResponse")]
+        System.Threading.Tasks.Task DeleteBondAsync(BondShopper.Model.Bond bond);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/UpdateBond", ReplyAction="http://tempuri.org/IBondService/UpdateBondResponse")]
+        void UpdateBond(BondShopper.Model.Bond bond);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/UpdateBond", ReplyAction="http://tempuri.org/IBondService/UpdateBondResponse")]
+        System.Threading.Tasks.Task UpdateBondAsync(BondShopper.Model.Bond bond);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -69,20 +75,28 @@ namespace BondShopper.ClientApp.BondShopperService {
             return base.Channel.GetBondsAsync();
         }
         
-        public System.Collections.Generic.List<BondShopper.Model.Client> GetClients() {
-            return base.Channel.GetClients();
+        public void AddBond(BondShopper.Model.Bond bond) {
+            base.Channel.AddBond(bond);
         }
         
-        public System.Threading.Tasks.Task<System.Collections.Generic.List<BondShopper.Model.Client>> GetClientsAsync() {
-            return base.Channel.GetClientsAsync();
+        public System.Threading.Tasks.Task AddBondAsync(BondShopper.Model.Bond bond) {
+            return base.Channel.AddBondAsync(bond);
         }
         
-        public void SubmitOrder(BondShopper.Model.Order order) {
-            base.Channel.SubmitOrder(order);
+        public void DeleteBond(BondShopper.Model.Bond bond) {
+            base.Channel.DeleteBond(bond);
         }
         
-        public System.Threading.Tasks.Task SubmitOrderAsync(BondShopper.Model.Order order) {
-            return base.Channel.SubmitOrderAsync(order);
+        public System.Threading.Tasks.Task DeleteBondAsync(BondShopper.Model.Bond bond) {
+            return base.Channel.DeleteBondAsync(bond);
+        }
+        
+        public void UpdateBond(BondShopper.Model.Bond bond) {
+            base.Channel.UpdateBond(bond);
+        }
+        
+        public System.Threading.Tasks.Task UpdateBondAsync(BondShopper.Model.Bond bond) {
+            return base.Channel.UpdateBondAsync(bond);
         }
     }
 }

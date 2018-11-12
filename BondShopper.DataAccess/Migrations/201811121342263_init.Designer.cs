@@ -13,7 +13,7 @@ namespace BondShopper.DataAccess.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201811091140406_init"; }
+            get { return "201811121342263_init"; }
         }
         
         string IMigrationMetadata.Source

@@ -16,6 +16,25 @@ namespace BondShopper.ClientApp
         public Proxy(string endpointName) : base(endpointName) { }
         public Proxy(Binding binding, string address) : base(binding, new EndpointAddress(address)) { }
 
+        public void AddBond(Bond bond)
+        {
+            Channel.AddBond(bond);
+        }
+
+        public Task AddBondAsync(Bond bond)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteBond(Bond bond)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteBondAsync(Bond bond)
+        {
+            throw new NotImplementedException();
+        }
 
         public List<Bond> GetBonds()
         {
@@ -27,22 +46,12 @@ namespace BondShopper.ClientApp
             throw new NotImplementedException();
         }
 
-        public List<Client> GetClients()
+        public void UpdateBond(Bond bond)
         {
-            throw new NotImplementedException();
+            Channel.UpdateBond(bond);
         }
 
-        public Task<List<Client>> GetClientsAsync()
-        {
-            throw new NotImplementedException();
-        }
-
-        public void SubmitOrder(Order order)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task SubmitOrderAsync(Order order)
+        public Task UpdateBondAsync(Bond bond)
         {
             throw new NotImplementedException();
         }

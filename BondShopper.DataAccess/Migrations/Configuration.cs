@@ -71,7 +71,15 @@ namespace BondShopper.DataAccess.Migrations
                 }
                 );
             context.Clients.AddOrUpdate(c => c.Name,
-                new Client { Name = "Otto" });
+                new Client
+                {
+                    Name = "Otto",
+                    Holdings = new System.Collections.Generic.List<Bond> {
+                        new Bond {
+                        Name = "TEST",
+                        InterestCouponRate = 0, Price = 100, Principal = 100, MaturityInMonths = 1 } }
+                },
+                    new Client { Name = "John" });
         }
     }
 }

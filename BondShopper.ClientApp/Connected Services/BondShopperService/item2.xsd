@@ -13,26 +13,38 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClients">
+  <xs:element name="AddBond">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BondShopper.Model" minOccurs="0" name="bond" nillable="true" type="q2:Bond" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="AddBondResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>
   </xs:element>
-  <xs:element name="GetClientsResponse">
+  <xs:element name="DeleteBond">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/BondShopper.Model" minOccurs="0" name="GetClientsResult" nillable="true" type="q2:ArrayOfClient" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BondShopper.Model" minOccurs="0" name="bond" nillable="true" type="q3:Bond" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SubmitOrder">
+  <xs:element name="DeleteBondResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateBond">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/BondShopper.Model" minOccurs="0" name="order" nillable="true" type="q3:Order" />
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/BondShopper.Model" minOccurs="0" name="bond" nillable="true" type="q4:Bond" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="SubmitOrderResponse">
+  <xs:element name="UpdateBondResponse">
     <xs:complexType>
       <xs:sequence />
     </xs:complexType>

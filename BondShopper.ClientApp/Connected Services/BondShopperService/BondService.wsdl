@@ -42,30 +42,40 @@
   <wsdl:message name="IBondService_GetBonds_OutputMessage">
     <wsdl:part name="parameters" element="tns:GetBondsResponse" />
   </wsdl:message>
-  <wsdl:message name="IBondService_GetClients_InputMessage">
-    <wsdl:part name="parameters" element="tns:GetClients" />
+  <wsdl:message name="IBondService_AddBond_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddBond" />
   </wsdl:message>
-  <wsdl:message name="IBondService_GetClients_OutputMessage">
-    <wsdl:part name="parameters" element="tns:GetClientsResponse" />
+  <wsdl:message name="IBondService_AddBond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddBondResponse" />
   </wsdl:message>
-  <wsdl:message name="IBondService_SubmitOrder_InputMessage">
-    <wsdl:part name="parameters" element="tns:SubmitOrder" />
+  <wsdl:message name="IBondService_DeleteBond_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBond" />
   </wsdl:message>
-  <wsdl:message name="IBondService_SubmitOrder_OutputMessage">
-    <wsdl:part name="parameters" element="tns:SubmitOrderResponse" />
+  <wsdl:message name="IBondService_DeleteBond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteBondResponse" />
+  </wsdl:message>
+  <wsdl:message name="IBondService_UpdateBond_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBond" />
+  </wsdl:message>
+  <wsdl:message name="IBondService_UpdateBond_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateBondResponse" />
   </wsdl:message>
   <wsdl:portType name="IBondService">
     <wsdl:operation name="GetBonds">
       <wsdl:input wsaw:Action="http://tempuri.org/IBondService/GetBonds" message="tns:IBondService_GetBonds_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IBondService/GetBondsResponse" message="tns:IBondService_GetBonds_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="GetClients">
-      <wsdl:input wsaw:Action="http://tempuri.org/IBondService/GetClients" message="tns:IBondService_GetClients_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IBondService/GetClientsResponse" message="tns:IBondService_GetClients_OutputMessage" />
+    <wsdl:operation name="AddBond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBondService/AddBond" message="tns:IBondService_AddBond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBondService/AddBondResponse" message="tns:IBondService_AddBond_OutputMessage" />
     </wsdl:operation>
-    <wsdl:operation name="SubmitOrder">
-      <wsdl:input wsaw:Action="http://tempuri.org/IBondService/SubmitOrder" message="tns:IBondService_SubmitOrder_InputMessage" />
-      <wsdl:output wsaw:Action="http://tempuri.org/IBondService/SubmitOrderResponse" message="tns:IBondService_SubmitOrder_OutputMessage" />
+    <wsdl:operation name="DeleteBond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBondService/DeleteBond" message="tns:IBondService_DeleteBond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBondService/DeleteBondResponse" message="tns:IBondService_DeleteBond_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBond">
+      <wsdl:input wsaw:Action="http://tempuri.org/IBondService/UpdateBond" message="tns:IBondService_UpdateBond_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IBondService/UpdateBondResponse" message="tns:IBondService_UpdateBond_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IBondService" type="tns:IBondService">
@@ -79,8 +89,8 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetClients">
-      <soap:operation soapAction="http://tempuri.org/IBondService/GetClients" style="document" />
+    <wsdl:operation name="AddBond">
+      <soap:operation soapAction="http://tempuri.org/IBondService/AddBond" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -88,8 +98,17 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SubmitOrder">
-      <soap:operation soapAction="http://tempuri.org/IBondService/SubmitOrder" style="document" />
+    <wsdl:operation name="DeleteBond">
+      <soap:operation soapAction="http://tempuri.org/IBondService/DeleteBond" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBond">
+      <soap:operation soapAction="http://tempuri.org/IBondService/UpdateBond" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -110,8 +129,8 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="GetClients">
-      <soap12:operation soapAction="http://tempuri.org/IBondService/GetClients" style="document" />
+    <wsdl:operation name="AddBond">
+      <soap12:operation soapAction="http://tempuri.org/IBondService/AddBond" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -119,8 +138,17 @@
         <soap12:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
-    <wsdl:operation name="SubmitOrder">
-      <soap12:operation soapAction="http://tempuri.org/IBondService/SubmitOrder" style="document" />
+    <wsdl:operation name="DeleteBond">
+      <soap12:operation soapAction="http://tempuri.org/IBondService/DeleteBond" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateBond">
+      <soap12:operation soapAction="http://tempuri.org/IBondService/UpdateBond" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -134,9 +162,9 @@
       <soap:address location="http://localhost:2112/bondservice" />
     </wsdl:port>
     <wsdl:port name="NetTcpBinding_IBondService" binding="tns:NetTcpBinding_IBondService">
-      <soap12:address location="net.tcp://localhost2113/Bondservice" />
+      <soap12:address location="net.tcp://localhost:2113/Bondservice" />
       <wsa10:EndpointReference>
-        <wsa10:Address>net.tcp://localhost2113/Bondservice</wsa10:Address>
+        <wsa10:Address>net.tcp://localhost:2113/Bondservice</wsa10:Address>
         <Identity xmlns="http://schemas.xmlsoap.org/ws/2006/02/addressingidentity">
           <Upn>PC2\Otto</Upn>
         </Identity>

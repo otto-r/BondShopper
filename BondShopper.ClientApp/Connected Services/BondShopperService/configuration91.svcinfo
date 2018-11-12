@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="h/lObBN9e46+hspNlq3lEY57qm0=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="/Eay1h7OnA+41AmP2S3n6h5G6I4=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="BasicHttpBinding_IBondService">
       <properties>
@@ -315,10 +315,10 @@
         </property>
       </properties>
     </endpoint>
-    <endpoint name="NetTcpBinding_IBondService" contract="BondShopperService.IBondService" bindingType="netTcpBinding" address="net.tcp://localhost2113/Bondservice" bindingConfiguration="NetTcpBinding_IBondService">
+    <endpoint name="NetTcpBinding_IBondService" contract="BondShopperService.IBondService" bindingType="netTcpBinding" address="net.tcp://localhost:2113/Bondservice" bindingConfiguration="NetTcpBinding_IBondService">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>net.tcp://localhost2113/Bondservice</serializedValue>
+          <serializedValue>net.tcp://localhost:2113/Bondservice</serializedValue>
         </property>
         <property path="/behaviorConfiguration" isComplexType="false" isExplicitlyDefined="false" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue />

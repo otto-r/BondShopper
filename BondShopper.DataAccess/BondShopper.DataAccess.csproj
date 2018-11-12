@@ -49,9 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BondShopperDbContext.cs" />
-    <Compile Include="Migrations\201811091140406_init.cs" />
-    <Compile Include="Migrations\201811091140406_init.Designer.cs">
-      <DependentUpon>201811091140406_init.cs</DependentUpon>
+    <Compile Include="Migrations\201811121342263_init.cs" />
+    <Compile Include="Migrations\201811121342263_init.Designer.cs">
+      <DependentUpon>201811121342263_init.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -67,8 +67,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201811091140406_init.resx">
-      <DependentUpon>201811091140406_init.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201811121342263_init.resx">
+      <DependentUpon>201811121342263_init.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
