@@ -16,12 +16,14 @@ namespace BondShopper.ClientApp
 
             while (input != "q")
             {
+                Console.Clear();
                 Console.WriteLine("What do you want to do?");
 
                 Console.WriteLine("1. Get bonds");
                 Console.WriteLine("2. Add bond");
                 Console.WriteLine("3. Remove bond");
                 Console.WriteLine("4. Update bond");
+                Console.WriteLine("q. To Quit");
 
                 input = Console.ReadLine();
                 if (input == "1")
@@ -34,23 +36,48 @@ namespace BondShopper.ClientApp
                 }
                 else if (input == "3")
                 {
-
+                    DeleteBond();
                 }
                 else if (input == "4")
                 {
-                    Console.Clear();
-                    ListBonds();
-                    Console.Write("What bond?(id)");
-                    var id = Console.ReadLine();
-                    Console.Write("Change name: ");
-                    var name = Console.ReadLine();
-                    Bond bond = new Bond { Id = int.Parse(id), Name = name };
-                    Proxy proxy = new Proxy(binding);
-                    proxy.UpdateBond(bond);
-                    proxy.Close();
+                    UpdateBond();
                 }
 
                 input = Console.ReadLine();
+            }
+        }
+
+        private static void UpdateBond()
+        {
+            Console.Clear();
+            ListBonds();
+            Console.Write("What bond?(id)");
+            var id = Console.ReadLine();
+            Console.Write("Change name: ");
+            var name = Console.ReadLine();
+            Bond bond = new Bond { Id = int.Parse(id), Name = name };
+            Proxy proxy = new Proxy(binding);
+            proxy.UpdateBond(bond);
+            proxy.Close();
+        }
+
+        private static void DeleteBond()
+        {
+            var input = "";
+            while (input != "q")
+            {
+                var bonds = GetBonds();
+                ListBonds();
+                Console.WriteLine("What bond do you want to delete?");
+                input = Console.ReadLine();
+                if (bonds.Where(b => b.Id == int.Parse(input)).Count() == 1)
+                {
+                    var bond = bonds.Single(b => b.Id == int.Parse(input));
+                    Proxy proxy = new Proxy(binding);
+                    proxy.DeleteBond(bond);
+                    proxy.Close();
+                    input = "q";
+                }
             }
         }
 
@@ -74,8 +101,6 @@ namespace BondShopper.ClientApp
             {
                 Console.WriteLine($"{bond.Id}. {bond.Name}");
             }
-            Console.ReadKey();
-            Console.Clear();
         }
 
         private static List<Bond> GetBonds()

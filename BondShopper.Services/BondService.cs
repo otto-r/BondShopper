@@ -23,7 +23,8 @@ namespace BondShopper.Services
 
         public void DeleteBond(Bond bond)
         {
-            _context.Bonds.Remove(bond);
+            var bondToDelete = _context.Bonds.Single(b => b.Id == bond.Id);
+            _context.Bonds.Remove(bondToDelete);
             _context.SaveChanges();
         }
 

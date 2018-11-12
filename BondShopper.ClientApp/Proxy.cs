@@ -28,7 +28,7 @@ namespace BondShopper.ClientApp
 
         public void DeleteBond(Bond bond)
         {
-            throw new NotImplementedException();
+            Channel.DeleteBond(bond);
         }
 
         public Task DeleteBondAsync(Bond bond)
