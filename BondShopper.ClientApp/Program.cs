@@ -9,7 +9,6 @@ namespace BondShopper.ClientApp
 {
     class Program
     {
-        const string binding = "NetTcpBinding_IBondService";
         static void Main(string[] args)
         {
             var input = "";
@@ -56,7 +55,7 @@ namespace BondShopper.ClientApp
             Console.Write("Change name: ");
             var name = Console.ReadLine();
             Bond bond = new Bond { Id = int.Parse(id), Name = name };
-            Proxy proxy = new Proxy(binding);
+            BondShopper1.BondServiceClient proxy = new BondShopper1.BondServiceClient();
             proxy.UpdateBond(bond);
             proxy.Close();
         }
@@ -73,7 +72,7 @@ namespace BondShopper.ClientApp
                 if (bonds.Where(b => b.Id == int.Parse(input)).Count() == 1)
                 {
                     var bond = bonds.Single(b => b.Id == int.Parse(input));
-                    Proxy proxy = new Proxy(binding);
+                    BondShopper1.BondServiceClient proxy = new BondShopper1.BondServiceClient();
                     proxy.DeleteBond(bond);
                     proxy.Close();
                     input = "q";
@@ -105,7 +104,7 @@ namespace BondShopper.ClientApp
 
         private static List<Bond> GetBonds()
         {
-            Proxy proxy = new Proxy(binding);
+            BondShopper1.BondServiceClient proxy = new BondShopper1.BondServiceClient();
             var bonds = proxy.GetBonds();
             proxy.Close();
             return bonds;
@@ -113,7 +112,7 @@ namespace BondShopper.ClientApp
 
         private static void AddBond(Bond bond)
         {
-            Proxy proxy = new Proxy(binding);
+            BondShopper1.BondServiceClient proxy = new BondShopper1.BondServiceClient();
             proxy.AddBond(bond);
             proxy.Close();
         }

@@ -8,11 +8,11 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace BondShopper.ClientApp.BondShopperService {
+namespace BondShopper.ClientApp.BondShopper1 {
     
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BondShopperService.IBondService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="BondShopper1.IBondService")]
     public interface IBondService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IBondService/GetBonds", ReplyAction="http://tempuri.org/IBondService/GetBondsResponse")]
@@ -41,12 +41,12 @@ namespace BondShopper.ClientApp.BondShopperService {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IBondServiceChannel : BondShopper.ClientApp.BondShopperService.IBondService, System.ServiceModel.IClientChannel {
+    public interface IBondServiceChannel : BondShopper.ClientApp.BondShopper1.IBondService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class BondServiceClient : System.ServiceModel.ClientBase<BondShopper.ClientApp.BondShopperService.IBondService>, BondShopper.ClientApp.BondShopperService.IBondService {
+    public partial class BondServiceClient : System.ServiceModel.ClientBase<BondShopper.ClientApp.BondShopper1.IBondService>, BondShopper.ClientApp.BondShopper1.IBondService {
         
         public BondServiceClient() {
         }

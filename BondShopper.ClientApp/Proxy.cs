@@ -1,4 +1,4 @@
-﻿using BondShopper.ClientApp.BondShopperService;
+﻿using BondShopper.ClientApp.BondShopper1;
 using BondShopper.Model;
 using System;
 using System.Collections.Generic;
@@ -15,6 +15,8 @@ namespace BondShopper.ClientApp
         public Proxy() { }
         public Proxy(string endpointName) : base(endpointName) { }
         public Proxy(Binding binding, string address) : base(binding, new EndpointAddress(address)) { }
+
+
 
         public void AddBond(Bond bond)
         {

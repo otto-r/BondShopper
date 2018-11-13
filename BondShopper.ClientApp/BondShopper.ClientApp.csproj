@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\BondShopperService\Reference.cs">
+    <Compile Include="Connected Services\BondShopper1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -56,14 +56,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Connected Services\BondShopperService\BondService.wsdl" />
-    <None Include="Connected Services\BondShopperService\item.xsd">
+    <None Include="Connected Services\BondShopper1\BondService.wsdl" />
+    <None Include="Connected Services\BondShopper1\item.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BondShopperService\item1.xsd">
+    <None Include="Connected Services\BondShopper1\item1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Connected Services\BondShopperService\item2.xsd">
+    <None Include="Connected Services\BondShopper1\item2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Properties\DataSources\BondShopper.Model.Bond.datasource" />
@@ -79,19 +79,19 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\BondShopperService\" />
+    <WCFMetadataStorage Include="Connected Services\BondShopper1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperService\item.disco" />
+    <None Include="Connected Services\BondShopper1\item.disco" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperService\configuration91.svcinfo" />
+    <None Include="Connected Services\BondShopper1\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperService\configuration.svcinfo" />
+    <None Include="Connected Services\BondShopper1\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\BondShopperService\Reference.svcmap">
+    <None Include="Connected Services\BondShopper1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
